@@ -82,7 +82,7 @@ app = Celery(conf.get('celery', 'CELERY_APP_NAME'), config_source=celery_configu
 def execute_command(command_to_exec: CommandType) -> None:
     """Executes command."""
     BaseExecutor.validate_command(command_to_exec)
-    log.info("Executing command in Celery: %s", command_to_exec)
+    log.info("Executing command in Celery nam hihi: %s", command_to_exec)
     celery_task_id = app.current_task.request.id
     log.info(f"Celery task ID: {celery_task_id}")
 
